@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <title>transformaçao</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+        }
+        div{
+            width: 360px;
+            height: 540px;
+        }
+        div div{
+            overflow: hidden;
+        }
+        .uno img{
+            transform:translate(-120, 0);
+            transition: 2s transform;
+        }
+        .uno:hover img{
+            transform: scale(3);
+        }
+        .dos img{
+            transform: translate(-360px, 0) scale(1);
+            transition: 5s transform;
+        }
+        .dos:hover img{
+            transform: scale(3);
+        }
+        .tres img{
+            transform: translate(-120px, 0);
+            transition: 3s transform;
+        }
+        .tres:hover img{
+            transform: scale(3);
+        }
+        .cuatro img{
+            transform: translate(0, -540px) skewX(0);
+            transition: 6s transform;
+        }
+        .cuatro:hover img{
+            transform: skewX(30deg);
+        }
+        .cinco img{
+            transform: translate(-360px, -540px) skewY(0);
+            transition: 5s transform;
+        }
+        .cinco:hover img{
+            transform: skewY(50deg);
+        }
+        .seis img{
+            transform: translate(-720px, -540px) scale(1);
+            transition: 4s transform;
+        }
+        .seis:hover img{
+            transform:scale(2);
+        }
+        i{
+           position: absolute;
+           right: 170px;
+           top: 50px;
+           padding: 30px;
+           color: crimson;
+           transform: translateY(0);
+           transition: 3s transform;
+        }
+        i:hover{
+           transform: translateY(600px);
+           color:darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="uno">
+            <img src="images/i.jpg">
+        </div>
+        <div class="dos">
+            <img src="images/i.jpg">
+        </div>
+        <div class="tres">
+            <img src="images/i.jpg">
+        </div>
+        <div class="cuatro">
+            <img src="images/i.jpg">
+        </div>
+        <div class="cinco">
+            <img src="images/i.jpg">
+        </div>
+        <div class="seis">
+            <img src="images/i.jpg">
+        </div>
+    </div>
+    <i class="fas fa-ring"></i>
+</body>
+</html>
